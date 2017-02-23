@@ -25,5 +25,3 @@ function Pause() {
 but_play.onclick = (function(){
   Pause();
 })
-
-
