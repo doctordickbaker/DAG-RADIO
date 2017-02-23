@@ -116,11 +116,43 @@ h1 {
     font-size: .8em;
   }
 }
+#gonzo {
+  position: fixed;
+  right: .3em;
+  bottom: 0;
+  font-size: 1em;
+  transiton: all 500ms;
+}
 
-.off {
+#but_play.on {
   
 }
 
-.on {
-  color: white;
+
+@keyframes slidein {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(.90);
+  }
+}
+#but_play.off {
+    animation-duration: 100ms;
+   -webkit-animation: slidein 500ms linear infinite alternate;
+   -moz-animation: slidein 500ms linear infinite alternate;
+    -ms-animation: slidein 500ms linear infinite alternate;
+     -o-animation: slidein 500ms linear infinite alternate;
+        animation: slidein 500ms linear infinite alternate;
+ 
+}
+#gonzo.off {
+  opacity: 0;
+}
+#gonzo.on {
+  opacity: .25;
+}
+#gonzo.on:hover {
+  opacity: 1;
 }
