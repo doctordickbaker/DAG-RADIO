@@ -25,6 +25,7 @@ body, html {
 #background.on {
   transform: translate(-108vw,-108vh);
   -webkit-filter:blur(8px);
+  filter: blur(8px);
   -webkit-filter:brightness(.5);
 }
 #background.off {
@@ -101,10 +102,6 @@ h1 {
   align-item: center;
   transition: all 100ms;
 }
-#but_play:active {
-  transform: scale(.70);
-}
-
 @media screen and (max-width: 1000px) {
     h1 {
       font-size: 4em;
@@ -146,6 +143,8 @@ h1 {
      -o-animation: slidein 500ms linear infinite alternate;
         animation: slidein 500ms linear infinite alternate;
  
+  -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+  animation-delay: 2s;
 }
 #gonzo.off {
   opacity: 0;
@@ -155,4 +154,33 @@ h1 {
 }
 #gonzo.on:hover {
   opacity: 1;
+}
+#but_play:active {
+  transform: scale(.70);
+}
+
+
+@keyframes playPulse {
+  0% {
+    transform: scale(1);
+  }
+  96% {transform: scale(1)}
+
+  100% {
+    transform: scale(1.04);
+  }
+}
+
+h1#logo.off{
+  
+}
+h1#logo.on{
+      animation-duration: 400ms;
+   -webkit-animation: playPulse 440ms linear infinite alternate;
+   -moz-animation: playPulse 440ms linear infinite alternate;
+    -ms-animation: plusPulse 440ms linear infinite alternate;
+     -o-animation: playPulse 440ms linear infinite alternate;
+        animation: playPulse 440ms linear infinite alternate;
+    -webkit-animation-delay: 6s; /* Safari 4.0 - 8.0 */
+  animation-delay: 6s;
 }
