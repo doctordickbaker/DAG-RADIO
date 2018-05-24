@@ -3,7 +3,7 @@ var but_play = document.getElementById("but_play");
 var audioPlayer = document.getElementById("audioPlayer");
 var gonzo = document.getElementById("gonzo");
 var logo =  document.getElementById("logo");
-audioPlayer.src = "https://mopidy.electrostat.xyz/stream/live.mp3";
+audioPlayer.src = "http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p";
 ///set station's URL here
 
 function Pause() {
